@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    font-family: sans-serif;
+    background: url(../image/Asset/valorant-background.jpg) no-repeat;
+    background-size: cover;
+}
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container{
+    width: 75%;
+}
+
+article{
+    float: left;
+    width: 60%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+article>img{
+    min-width: 400px;
+}
+
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 40%;
+    height: 600px;
+    flex-shrink: 1;
+    background-color: rgb(247, 239, 229);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px lightgrey;
+}
+
+/*FORM*/
+.form-container{
+    
+    width: 100%;
+    margin: 20px 0px;
+    padding: 30px 0px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form>h2{
+    text-align: left;
+    margin: 20px 0px;
+    font-size: 30px;
+}
+
+.input{
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    padding: 0px 20px;
+}
+
+.login-button{
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    padding: 0px 20px;
+    margin: 20px 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF4655;
+    color: white;
+}
+
+.login-button:hover{
+    background-color: white;
+    color: black;
+}

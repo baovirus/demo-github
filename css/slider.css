@@ -1,0 +1,137 @@
+/*Products Slide Show*/
+/*Layout*/
+.Product-slider {
+    width: 100%;
+    min-height: 400px;
+    background-image: url(../image/Asset/slider-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-container {
+    position: absolute;
+    width: 90%;
+    min-height: 400px;
+    margin: 0 5%;
+}
+
+.slider-left {
+    position: relative;
+    background-color: rgba(19, 0, 66, 0.786);
+    z-index: 1;
+    width: 40%;
+    min-height: 400px;
+    max-height: 400px;
+    top: 0;
+    float: left;
+}
+
+.slider-left>img{
+    max-width: 100%;
+}
+
+.slider-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: rgba(0, 255, 255, 0.31); */
+    
+    z-index: 1;
+    width: 60%;
+    min-height: 400px;
+    top: 0;
+    float: right;
+}
+
+.slide {
+    width: 800px;
+    height: 400px;
+    float: left;
+}
+
+.slide-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 2500px;
+    
+    -webkit-animation: slide 7s ease infinite;
+    
+}
+
+.slides-container{
+    display: flex;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+/*Buttons*/
+.next,
+.prev {
+    position: absolute;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(1, 1, 57);
+    color: white;
+    font-weight: bold;
+    display: none;
+}
+
+.next {
+    left: 90%;
+}
+
+.prev {
+    right: 90%;
+}
+
+/*button animation*/
+/* .slider-right:hover #slider-button {
+    display: block;
+    animation: hoverin 1s ease;
+} */
+
+.in{
+    animation: in .2s ease;
+}
+.out{
+    animation: out .2s ease;
+}
+
+@keyframes in{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes out{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+/*thêm animation khi nhấn nút next hoặc prev*/
+.fade {
+    display: block;
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slide{
+    0%, 22%{
+        margin-left: 0PX;
+    }
+    33%, 55%{
+        margin-left: -800px;
+    }
+    66%, 88%{
+        margin-left: -1600px;
+    }
+}

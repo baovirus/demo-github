@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="../css/head-nav.css">
+    <link rel="stylesheet" href="../css/product-detail.css">
+</head>
+
+<body>
+    <header>
+        <!--NAVIGATION BAR-->
+        <nav class="head-nav-container">
+            <div class="head-nav">
+                <div class="left-nav">
+                    <a href="../index.html" class="header-logo">
+                        <img src="../image/Logo/logo_with_text.png" id="logo">
+                        <h1>
+                            SKIN SHOP
+                        </h1>
+                    </a>
+
+                </div>
+
+                <div class="right-nav">
+                    <ul class="right-nav-ul">
+                        <li>
+                            <form action="">
+                                <input type="search" value="Tìm kiếm" class="search-bar">
+                            </form>
+                        </li>
+                        <li id="shopping-cart-icon" onmouseover="over()" onmouseleave="leave()">
+                            <a href="../Shopping-Cart.html">
+                                <script>
+                                    function over() {
+                                        var cart1 = document.getElementById("cart-1")
+                                        var cart2 = document.getElementById("cart-2")
+                                        cart1.style.opacity = 0
+                                        cart2.style.opacity = 1
+                                    }
+
+                                    function leave() {
+                                        var cart1 = document.getElementById("cart-1")
+                                        var cart2 = document.getElementById("cart-2")
+                                        cart1.style.opacity = 1
+                                        cart2.style.opacity = 0
+                                    }
+                                </script>
+                                <img id="cart-1" src="../image/Icon/shopping-cart.png" alt="">
+                                <img id="cart-2" src="../image/Icon/shopping-cart-hover.png" alt="">
+                            </a>
+                        </li>
+                        <li id="register">
+                            <a href="../signup.html">
+                                ĐĂNG KÝ
+                            </a>
+                        </li>
+                        <li id="login">
+                            <a href="../login.html">
+                                ĐĂNG NHẬP
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="product-container">
+            <div class="product-text-container">
+                <div class="row-1">
+                    <div class="product-name-prize">
+                        <h2 id="product-name"> [BỘ SƯU TẬP] ONI 2.0</h2>
+                        <h1 id="product-prize">₫ 1.200.000</h1>
+                    </div>
+                    <div class="product-button-container">
+                        <button id="buy" onclick="event.preventDefault(); window.location.href='../Shopping-Cart.html'">MUA NGAY</button>
+                        <button id="addToCart" onclick="add2()">THÊM VÀO GIỎ HÀNG</button>
+                    </div>
+                </div>
+                <h2><strong>Mô tả:</strong> Bộ sưu tập Oni 2.0 gồm có: Mele, Vandal, Bulldog, Ares, Fenzy.</h2>
+            </div>
+
+            <hr style="width: 70%; height: 2px; background-color: black;">
+            <div class="product-image-container">
+                <article>
+                    <img src="../image/Product/Bundles/Oni2.0/0.jpg" alt="" class="product-image">
+                </article>
+                <aside>
+                    <script>
+                        for (var i = 0; i < 6; i++) {
+                            document.write(`
+                                <img src="../image/Product/Bundles/Oni2.0/${i}.jpg" alt="" class="aside-image" onclick="change()">
+                                `)
+                        }
+                    </script>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <footer style="
+    width: 100%;
+    height: 30px;
+    background-color: rgb(71, 23, 115);
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 5px 0px;
+    ">
+        Copyright Nguyễn Thái Bảo - PS29814 - IT18307 || <a href=""
+            style="color: white; text-decoration: none;">baontps29814@gmail.com</a>
+    </footer>
+    <script src="../js/addToCart.js"></script>
+    <script src="../js/detail_img.js"></script>
+</body>
+
+</html>

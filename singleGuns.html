@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundle</title>
+    <link rel="stylesheet" href="css/product.css">
+    <script src="js/onmouseover.js"></script>
+
+<body>
+    <div class="container">
+        <script>
+            var listSanPham = [
+                { ten: "ONI 2.0", gia: '1.200.000 đ', giaSo: 1200000, hinh: 'image/Product/oni 2.0.jpg', trang: 'Bundle/Oni-2.0.html' },
+                { ten: "VCT LOCK//IN", gia: '900.000 đ', giaSo: 900000, hinh: 'image/Product/VCT23_LOCKIN.jpg', trang: 'Bundle/VCT-LOCK-IN.html' },
+                { ten: "ARAXYS", gia: '1.000.000 đ', giaSo: 1000000, hinh: 'image/Product/Araxys_Bundle.jpg', trang: 'Bundle/Araxys.html' },
+            ]
+
+            for (let i = 0; i < listSanPham.length; i++) {
+                var sp = listSanPham[i];
+                var ten = sp.ten;
+                var gia = sp.gia;
+                var giaSo = sp.giaSo
+                var hinh = sp.hinh;
+                var trang = sp.trang
+                document.write(`
+        <div class="item-container" onmouseover="showDetails(this)" onmouseleave="hideDetail(this)">
+            <img src="${hinh}" id="prod-img">
+            
+
+            <div class="hidden-detail">
+                <div class="icon-container">
+                    <button onclick="favorite()">
+            <img src="image/Icon/Product_Icon/favorite.png" alt="">
+        </button>
+        <button onclick="add1()">
+            <img src="image/Icon/Product_Icon/plus.png" alt="">
+        </button>
+        <a href="${trang}" target="_top" id="prod-link">
+            <img src="image/Icon/Product_Icon/shopping-cart.png" alt="">
+            </a>
+        <button>
+            <img src="image/Icon/Product_Icon/comments.png" alt="">
+        </button>
+                </div>
+            </div>
+
+            <h1 align="center" style="margin: 0;"> ${ten} </h1>
+
+            <p align="center" style="margin: 0;" data-num="${giaSo}">
+                ${gia}
+            </p>
+            <a href="${trang}" target="_top" class="detail-button">Chi tiết</a>
+        </div>`)
+            }
+        </script>
+        <script src="js/addToCart.js"></script>
+        <script src="js/icons.js"></script>
+    </div>
+</body>
+
+</html>

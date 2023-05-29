@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của bạn</title>
+    <link rel="stylesheet" href="css/shopping-cart.css">
+    <link rel="stylesheet" href="css/head-nav.css">
+</head>
+
+<body>
+
+    <header>
+        <!--NAVIGATION BAR-->
+        <nav class="head-nav-container">
+            <div class="head-nav">
+                <div class="left-nav">
+                    <a href="index.html" class="header-logo">
+                        <img src="image/Logo/logo_with_text.png" id="logo">
+                        <h1>
+                            SKIN SHOP
+                        </h1>
+                    </a>
+
+                </div>
+
+                <div class="right-nav">
+                    <ul class="right-nav-ul">
+                        <li>
+                            <form action="">
+                                <input type="search" value="Tìm kiếm" class="search-bar">
+                            </form>
+                        </li>
+
+                        <li id="shopping-cart-icon" onmouseover="over()" onmouseleave="leave()">
+                            <a href="#">
+                                <script>
+                                    function over() {
+                                        var cart1 = document.getElementById("cart-1")
+                                        var cart2 = document.getElementById("cart-2")
+                                        cart1.style.opacity = 0
+                                        cart2.style.opacity = 1
+                                    }
+
+                                    function leave() {
+                                        var cart1 = document.getElementById("cart-1")
+                                        var cart2 = document.getElementById("cart-2")
+                                        cart1.style.opacity = 1
+                                        cart2.style.opacity = 0
+                                    }
+                                </script>
+                                <img id="cart-1" src="image/Icon/shopping-cart.png" alt="">
+                                <img id="cart-2" src="image/Icon/shopping-cart-hover.png" alt="">
+                            </a>
+                        </li>
+
+                        <li id="register">
+                            <a href="signup.html">
+                                ĐĂNG KÝ
+                            </a>
+                        </li>
+                        <li id="login">
+                            <a href="login.html">
+                                ĐĂNG NHẬP
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="column-1">
+            <div class="box">
+                <table border="0">
+                    <thead>
+                        <th colspan="2">
+                            Sản Phẩm
+                        </th>
+                        <th colspan="">
+                            Số lượng
+                        </th>
+                        <th colspan="">
+                            Giá
+                        </th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="image/Product/oni 2.0.jpg" alt="">
+                            </td>
+                            <td>
+                                <strong>[Bộ sưu tập] ONI 2.0</strong><br>
+                                Bộ sưu tập
+                            </td>
+                            <td>
+                                <input type="number" name="" id="" min="1" value="1">
+                            </td>
+                            <td>
+                                1,200,000đ
+                            </td>
+                            <td>
+                                <button class="btn-white" onclick="favorite()"><img src="image/Icon/Product_Icon/favorite.png" width="15px" height="15px" ></button>
+                                <button class="btn-white" >Xoá</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box box-red">
+                Bạn chưa có sản phẩm nào trong giỏ hàng, tiếp tục mua sắm <a href="index.html"> Tại Đây</a>.
+            </div>
+            <div class="box box-green">
+                <svg width="20px" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                </svg>
+                Nhận item trong vòng 1 tiếng!
+            </div>
+        </div>
+
+        <div class="column-2">
+            <div class="box">
+                Mã giảm giá<br>
+                <input type="text" name="" id="" placeholder="Mã giảm giá">
+                <button>Áp dụng</button>
+                <button onclick="clearCart()" style="margin-top: 10px;" align="center">Xóa giỏ hàng</button>
+            </div>
+            <div class="pay"> 
+                <h2 id="Total">Tổng cộng: <label id="total-price">0</label> đ</h2>
+                <button id="pay-button">Thanh toán</button>
+            </div>
+            
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/icons.js"></script>
+</body>
+
+</html>

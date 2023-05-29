@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #212121;
+}
+
+.content-container {
+    padding-top: 85.5px;
+}
+
+
+
+/*CLASSIFYS*/
+.classifys {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    background-color: #0030345c;
+}
+
+.classifys>h2 {
+    padding: 10px 0;
+    text-align: center;
+    color: #FF4655;
+}
+
+.classify-type {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin: 0 20px;
+    background-color: #FF4655;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.price-select {
+    font-size: 20px;
+    background-color: #FF4655;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+/*PRODUCT*/
+.product-container {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+
+}
+
+.product-container > h2 {
+    padding: 10px 0;
+    text-align: center;
+    color: #FF4655;
+}
+
+.products{
+    width: 100%;
+    min-height: 100px;
+    background-color: rgba(0, 255, 255, 0);
+
+}
+
+.products >iframe{
+    width: 90%;
+    margin: 5px 5%;
+    min-height: 1000px;
+    background-color: rgba(255, 0, 208, 0.168);
+}

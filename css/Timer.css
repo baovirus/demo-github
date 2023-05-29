@@ -1,0 +1,33 @@
+.slider-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-background{
+    max-width: 95%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#countdown{
+    display: flex;
+    justify-content: center;
+}
+
+.value-control{
+    padding: 0px 20px;
+    color: white;
+}
+
+.slider-left>h2{
+    color: white;
+}
+
+.value-control >span{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}

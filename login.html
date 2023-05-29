@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+
+    <link rel="stylesheet" href="css/head-nav.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <!--NAVIGATION BAR-->
+        <nav class="head-nav-container">
+            <div class="head-nav">
+                <div class="left-nav">
+                    <a href="index.html" class="header-logo">
+                        <img src="image/Logo/logo_with_text.png" id="logo">
+                        <h1>
+                            SKIN SHOP
+                        </h1>
+                    </a>
+
+                </div>
+
+                <div class="right-nav">
+                    <ul class="right-nav-ul">
+                        <li id="register">
+                            <a href="signup.html">
+                                ĐĂNG KÝ
+                            </a>
+                        </li>
+                        <li id="login">
+                            <a href="login.html">
+                                ĐĂNG NHẬP
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            <article>
+                <img src="image/Logo/logo_with_text.png" alt="">
+            </article>
+            <aside>
+                <div class="form-container">
+                    <form id="form-Login" action="">
+                        <h2>Đăng nhập</h2>
+                        <input class="input" type="text" name="uname" placeholder="Tên đăng nhập">
+                        <input class="input" type="password" name="pass" placeholder="Mật khẩu">
+                        <div style="
+                        display: flex;
+                        align-items: center;
+                        width: 80%;
+                        margin-top: 10px;
+                        ">
+                            <input type="checkbox" name="" id=""
+                            style="
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 10px;
+                            ">Ghi nhớ đăng nhập?
+                        </div>
+                        <button class="login-button">ĐĂNG NHẬP</button>
+                        <div>
+                            Chưa có tài khoản? <a href="signup.html" style="text-decoration: none; color: #FF4655;">Đăng ký</a> ngay.
+                        </div>
+                        <script src="js/log.js"></script>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
